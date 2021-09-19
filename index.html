@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="#">
+  <title>video-speed-controller</title>
+</head>
+
+<body>
+
+  <div class="slidesList">
+    <img class="slidesList__item" src="assets/img/background0.jpg" alt="background0">
+    <img class="slidesList__item" src="assets/img/background1.jpg" alt="background1">
+    <img class="slidesList__item" src="assets/img/background2.jpg" alt="background2">
+    <img class="slidesList__item" src="assets/img/background3.jpg" alt="background3">
+    <img class="slidesList__item" src="assets/img/background4.jpg" alt="background4">
+    <img class="slidesList__item" src="assets/img/background5.jpg" alt="background5">
+  </div>
+  <div class="arrows">
+    <button class="leftBtn">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="rightBtn">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+  <button class="popup-btn">
+    <i class="far fa-question-circle"></i>
+  </button>
+  <div class="popup">
+    <div class="popup__content">
+      <h2>Быстрые клавиши</h2>
+      <div class="popup__content-text">
+        <ul>
+          <li>
+            <span>Воспроизвести или приостановить видео</span><span>space</span>
+          </li>
+          <li>
+            <span>Включить или выключить звук</span><span>m</span>
+          </li>
+          <li>
+            <span>Включить или выключить полноэкранный режим</span><span>f</span>
+          </li>
+          <li>
+            <span>Видео на 5 секунд вперёд</span><span>ArrowRight</span>
+          </li>
+          <li>
+            <span>Видео на 5 секунд назад</span><span>ArrowLeft</span>
+          </li>
+          <li>
+            <span>Увеличить звук</span><span>ArrowUp</span>
+          </li>
+          <li>
+            <span>Уменьшить звук</span><span>ArrowDown</span>
+          </li>
+          <li>
+            <span>Ускорить видео</span><span>&#62</span>
+          </li>
+          <li>
+            <span>Замедлить видео</span><span>&#60</span>
+          </li>
+          <li>
+            <span>Выйти из полноэкранного режима или текущего диалогового окна</span><span>escape</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="player-wrapper">
+    <div class="player">
+      <video class="player__video" src="assets/video/video0.mp4" poster="assets/img/poster0.jpg"></video>
+      <div class="player__controls">
+        <button class="player__play-button">
+          <i class="fas fa-play"></i>
+        </button>
+        <input class="player__scroll progress__video" type="range" name="speedControl" min="0" max="100" step="0.25"
+          value="0">
+        <button class="player__sound-btn">
+          <i class="fas fa-volume-up"></i>
+        </button>
+        <input class="player__scroll progress__volume" type="range" name="volume" min="0" max="1" step="0.01"
+          value="0.5">
+        <button class="player__fullscreen-btn">
+          <i class="fas fa-expand"></i>
+        </button>
+      </div>
+    </div>
+    <div class="slider">
+      <ul class="slider-panel">
+        <li><img src="assets/img/poster0.jpg" alt="poster0"></li>
+        <li><img src="assets/img/poster1.jpg" alt="poster1"></li>
+        <li><img src="assets/img/poster2.jpg" alt="poster2"></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
